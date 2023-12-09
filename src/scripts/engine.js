@@ -11,6 +11,10 @@ const emojis = [
     "😭",
     "😡",
     "😡",
+    "🤢",
+    "🤢",
+    "🤤",
+    "🤤"
 ]
 let openCards = []
 
@@ -46,6 +50,8 @@ function checkMatch(){
     openCards=[]
 
     if(document.querySelectorAll(".boxMatch").length === emojis.length){
-        alert("Você venceu!")
+        if(!alert("Você venceu!")){
+            window.location.reload()
+        }
     }
 }
